@@ -1,0 +1,26 @@
+.imagen{
+    position: relative;
+}
+.imagen > img{
+    width: 100%;
+    height: 600px;
+    object-fit: cover;
+}
+.contenido{
+    position: absolute;
+    z-index: 999;
+    top: 200px;
+    left: 200px;
+}
+.titulos{
+    width: 350px;
+    display: flex;
+    flex-direction: column; 
+    margin-bottom: 30px;
+
+}
+.contenido h1{
+    color: white;
+    font-size: 100px;
+    font-weight: bolder;
+}

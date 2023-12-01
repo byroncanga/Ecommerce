@@ -1,0 +1,8 @@
+.creditoDirecto{
+    border-left: 1px solid gray;
+    padding-left: 20px;
+    padding: 10px; 
+}
+.creditoDirecto >p{
+    margin: 0px;
+}
