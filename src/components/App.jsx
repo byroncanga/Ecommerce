@@ -5,8 +5,6 @@ import Products from "./Products";
 import productos from "./listProducts";
 import Filters from "./Filters";
 
-
-
 function App() {  
 
   const [filter, setFilter] = useState({category: "all", minPrecio:0})
@@ -21,12 +19,20 @@ function App() {
   
   const productosFiltrados = filterProducts(productos)
 
+  const [shoppingCard, setShoppingCard] = useState([])
+
+  const handleNewProduct=(product)=>{  
+      const newCart = [...shoppingCard, product]
+      setShoppingCard(newCart)
+  }
+  const sumaCarrito = shoppingCard.length
+
   return (
     <>
-      <Navbar />
+      <Navbar cart={sumaCarrito} />
       <Header />
       <Filters filtro={setFilter} />
-      <div className="container my-4">
+      <div className="container my-4">           
         <div className="row">
          { productosFiltrados.map((product)=>{
             return (
@@ -37,6 +43,8 @@ function App() {
               content={product.content}
               category={product.categoria}
               price={product.precio}
+              handleNewProduct={handleNewProduct}
+              id={product.id}
             />
             );
           })}

@@ -6,7 +6,7 @@ const Header =() =>{
 return (
     <div className="container-fluid">
         <div className="contenido">
-            <div className="titulos">
+            <div className="titulos ">
                 <h1>Telefonos</h1>
                 <h2>Gama Alta</h2>
                 <p>Súmale una cartera o una funda magnética. O las dos. Y disfruta una carga inalámbrica rápida y eficiente.</p>
@@ -15,9 +15,7 @@ return (
        </div>
        <div className="imagen">
         <img src={back} alt="" />
-       </div>
-       
-
+       </div> 
     </div>
 )
 

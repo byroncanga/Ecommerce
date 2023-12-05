@@ -2,7 +2,8 @@ import React from "react";
 import "././css/Navbar.css"
 import logo from "./../assets/logo.png"
 
-const Navbar = () => {
+
+const Navbar = ({cart}) => {
   return (
     <div className="container-fluid bgNavbar">
       <nav className="container navbar navbar-expand-lg p-3 ">
@@ -42,17 +43,8 @@ const Navbar = () => {
                 </a>
               </li>
             </ul>
-            <form className="d-flex" role="search">
-              <input
-                className="form-control me-2"
-                type="search"
-                placeholder="Buscar Producto"
-                aria-label="Search"
-              />
-              <button className="btn btn-outline-success" type="submit">
-                Buscar
-              </button>
-            </form>
+            <h5 className=""><i class="bi bi-cart4"></i> {cart}</h5>
+            
           </div>
         </div>
       </nav>

@@ -1,7 +1,7 @@
 import React from "react";
 import "./css/Products.css";
 
-const Products = ({ image, title, content, category, price }) => {
+const Products = ({ image, title, content, category, price, handleNewProduct, id }) => {
   let cuotas = 24;
   let diferido = price / cuotas;
 
@@ -25,9 +25,10 @@ const Products = ({ image, title, content, category, price }) => {
               <h3>${diferido.toFixed(2)}</h3>
             </div>
           </div>
-          <a href="#" className="btn btn-primary my-3 w-100">
+          <button href="#" className="btn btn-primary my-3 w-100"  onClick={()=>{
+              handleNewProduct({image, title, content, category, price, id})}}>
             <i className="bi bi-cart-plus-fill"></i> Agregar
-          </a>
+          </button>
         </div>
       </div>
     </div>
